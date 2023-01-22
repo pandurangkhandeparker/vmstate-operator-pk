@@ -1,0 +1,31 @@
+# permissions for end users to edit pandurangazureavms.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: pandurangazureavm-editor-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: vmstate-operator-pk
+    app.kubernetes.io/part-of: vmstate-operator-pk
+    app.kubernetes.io/managed-by: kustomize
+  name: pandurangazureavm-editor-role
+rules:
+- apiGroups:
+  - azure.pandurang.com
+  resources:
+  - pandurangazureavms
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - azure.pandurang.com
+  resources:
+  - pandurangazureavms/status
+  verbs:
+  - get

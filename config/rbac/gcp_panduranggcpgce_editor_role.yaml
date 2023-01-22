@@ -1,0 +1,31 @@
+# permissions for end users to edit panduranggcpgces.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: panduranggcpgce-editor-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: vmstate-operator-pk
+    app.kubernetes.io/part-of: vmstate-operator-pk
+    app.kubernetes.io/managed-by: kustomize
+  name: panduranggcpgce-editor-role
+rules:
+- apiGroups:
+  - gcp.pandurang.com
+  resources:
+  - panduranggcpgces
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - gcp.pandurang.com
+  resources:
+  - panduranggcpgces/status
+  verbs:
+  - get

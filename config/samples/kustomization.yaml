@@ -1,0 +1,6 @@
+## Append samples you want in your CSV to this file as resources ##
+resources:
+- azure_v1_pandurangazureavm.yaml
+- gcp_v1_panduranggcpgce.yaml
+- aws_v1_pandurangawsec2.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

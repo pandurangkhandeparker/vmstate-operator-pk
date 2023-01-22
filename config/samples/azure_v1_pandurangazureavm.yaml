@@ -1,0 +1,12 @@
+apiVersion: azure.pandurang.com/v1
+kind: PandurangAzureAVM
+metadata:
+  labels:
+    app.kubernetes.io/name: pandurangazureavm
+    app.kubernetes.io/instance: pandurangazureavm-sample
+    app.kubernetes.io/part-of: vmstate-operator-pk
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: vmstate-operator-pk
+  name: pandurangazureavm-sample
+spec:
+  # TODO(user): Add fields here
